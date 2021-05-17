@@ -1,0 +1,19 @@
+.button-bg {
+  font-size: $font-size-md;
+  font-weight: $weight-bold;
+  color: $white;
+  background-color: $blue;
+  padding: 15px 39px 14px;
+  border: none;
+  outline: none;
+}
+
+.button-sm {
+  font-size: $font-size-exsm;
+  font-weight: $weight-normal;
+  color: $white;
+  background-color: $blue;
+  padding: 12px 19px 11px;
+  border: none;
+  outline: none;
+}

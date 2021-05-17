@@ -1,0 +1,40 @@
+.form__input {
+  width: 33%;
+  min-width: 297px;
+  height: 58px;
+  padding: 20px 0;
+  padding-right: 29px;
+  margin-right: 60px;
+  border-bottom: 1px solid $white;
+
+  label {
+    text-align: start;
+  }
+  input {
+    width: 220px;
+    margin: 0;
+    margin-left: 23px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: $font-size-sm;
+    font-weight: $weight-bold;
+    color: $white;
+    &::placeholder {
+      font-size: $font-size-sm;
+      font-weight: $weight-bold;
+      color: $white;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1439px) {
+  .form__input {
+    width: 80%;
+    min-width: none;
+    display: block;
+    height: auto;
+    padding: 15px 0;
+    margin-bottom: 10px;
+  }
+}

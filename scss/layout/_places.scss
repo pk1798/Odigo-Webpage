@@ -1,0 +1,60 @@
+.places {
+  width: 88%;
+  max-width: 1262px;
+  margin: auto;
+  clear: both;
+}
+
+@media (min-width: 320px) and (max-width: 720px) {
+  .places {
+    width: 88%;
+    max-width: none;
+    margin: auto;
+    text-align: justify;
+    .cards {
+      width: 100%;
+      min-width: none;
+      margin: auto;
+      margin-right: 10px;
+      figure {
+        width: 100%;
+        margin-bottom: 45px;
+        img {
+          width: 100%;
+          min-width: 250px;
+        }
+        figcaption {
+          width: 100%;
+          min-width: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1390px) {
+  .places {
+    width: 88%;
+    max-width: none;
+    margin: auto;
+    text-align: justify;
+    .cards {
+      width: 45%;
+      min-width: none;
+      margin: auto;
+      margin-right: 10px;
+      figure {
+        width: 100%;
+        margin-bottom: 45px;
+        img {
+          width: 100%;
+          min-width: 250px;
+        }
+        figcaption {
+          width: 100%;
+          min-width: 250px;
+        }
+      }
+    }
+  }
+}

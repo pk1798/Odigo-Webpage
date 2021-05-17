@@ -1,0 +1,85 @@
+footer {
+  background-color: $dark-violet;
+  font-size: $font-size-sm;
+  font-weight: $weight-normal;
+  padding: 118px 167px 118px 194px;
+  text-align: justify;
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+  .logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+  }
+  .menu {
+    display: inline-block;
+    width: 48%;
+    div {
+      ul {
+        list-style: none;
+        li {
+          padding: 3px;
+          a {
+            text-decoration: none;
+            color: $white;
+          }
+        }
+      }
+    }
+    .company {
+      width: 32%;
+      display: inline-block;
+    }
+    .location {
+      width: 32%;
+      display: inline-block;
+    }
+    .socialmedia {
+      width: 32%;
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+  footer {
+    padding: 10px 20px;
+    text-align: justify;
+    font-size: $font-size-exsm;
+    .logo {
+      display: block;
+      width: 48%;
+    }
+    .menu {
+      display: block;
+      width: 48%;
+      div {
+        ul {
+          list-style: none;
+          li {
+            padding: 3px;
+            a {
+              text-decoration: none;
+              color: $white;
+            }
+          }
+        }
+      }
+      .company {
+        width: 88%;
+        display: block;
+      }
+      .location {
+        width: 88%;
+        display: block;
+      }
+      .socialmedia {
+        width: 88%;
+        display: block;
+      }
+    }
+  }
+}

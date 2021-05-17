@@ -1,0 +1,25 @@
+// vendors
+@import "vendors/resets";
+
+// abstracts
+@import "abstracts/variables";
+
+// base
+
+@import "base/typography";
+
+// components
+
+@import "components/button";
+@import "components/input";
+@import "components/cards";
+
+// layout
+@import "layout/body";
+@import "layout/header";
+@import "layout/benefits";
+@import "layout/trips";
+@import "layout/_articles.scss";
+@import "layout/places";
+@import "layout/video";
+@import "layout/footer";

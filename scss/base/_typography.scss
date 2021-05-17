@@ -1,0 +1,56 @@
+/* **** utility clases **** */
+
+/* colors */
+
+.f-white {
+  color: $white;
+}
+.f-black {
+  color: $black;
+}
+.f-blue {
+  color: $blue;
+}
+.f-bright-blue {
+  color: $bright-blue;
+}
+.f-violet {
+  color: $violet;
+}
+
+.f-gray {
+  color: $gray;
+}
+
+/* font-size */
+
+.fs-exsm {
+  font-size: $font-size-exsm;
+}
+.fs-sm {
+  font-size: $font-size-sm;
+}
+.fs-md {
+  font-size: $font-size-md;
+}
+.fs-lg {
+  font-size: $font-size-lg;
+}
+.fs-xl {
+  font-size: $font-size-xl;
+}
+.fs-xxl {
+  font-size: $font-size-xxl;
+}
+
+/* font weight */
+
+.fw-normal {
+  font-weight: $weight-normal;
+}
+.fw-bold {
+  font-weight: $weight-bold;
+}
+.fw-bolder {
+  font-weight: $weight-bolder;
+}
