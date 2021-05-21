@@ -1,7 +1,6 @@
 footer {
   background-color: $dark-violet;
-  font-size: $font-size-sm;
-  font-weight: $weight-normal;
+  @include text_style($font-size-sm, $weight-normal, $white);
   padding: 118px 167px 118px 194px;
   text-align: justify;
   &:after {
@@ -30,16 +29,13 @@ footer {
       }
     }
     .company {
-      width: 32%;
-      display: inline-block;
+      @include footer_nav_list(32%, inline-block);
     }
     .location {
-      width: 32%;
-      display: inline-block;
+      @include footer_nav_list(32%, inline-block);
     }
     .socialmedia {
-      width: 32%;
-      display: inline-block;
+      @include footer_nav_list(32%, inline-block);
     }
   }
 }
@@ -50,12 +46,10 @@ footer {
     text-align: justify;
     font-size: $font-size-exsm;
     .logo {
-      display: block;
-      width: 48%;
+      @include footer_nav_list(48%, block);
     }
     .menu {
-      display: block;
-      width: 48%;
+      @include footer_nav_list(48%, block);
       div {
         ul {
           list-style: none;
@@ -69,16 +63,13 @@ footer {
         }
       }
       .company {
-        width: 88%;
-        display: block;
+        @include footer_nav_list(88%, block);
       }
       .location {
-        width: 88%;
-        display: block;
+        @include footer_nav_list(88%, block);
       }
       .socialmedia {
-        width: 88%;
-        display: block;
+        @include footer_nav_list(88%, block);
       }
     }
   }

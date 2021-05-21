@@ -7,122 +7,122 @@
   }
   .left {
     img {
-      float: left;
+      @include article_image(left);
       margin-right: 108px;
-      margin-bottom: 77px;
     }
   }
   .right {
     img {
-      float: right;
+      @include article_image(right);
       margin-left: 108px;
-      margin-bottom: 77px;
     }
   }
 }
-
 .article-desc {
   h2 {
     max-width: 357px;
-    font-size: $font-size-lg;
-    font-weight: $weight-bolder;
-    color: $violet;
+    @include text_style($font-size-lg, $weight-bolder, $violet);
     display: inline-block;
     margin-top: 26px;
     margin-bottom: 45px;
   }
   p {
     max-width: 519px;
-    font-size: $font-size-exsm;
-    font-weight: $weight-normal;
-    color: $violet;
+    @include text_style($font-size-exsm, $weight-normal, $violet);
     display: inline-block;
     margin-bottom: 58px;
   }
   a {
     text-decoration: none;
-    color: $bright-blue;
-    font-size: $font-size-exsm;
-    font-weight: $weight-normal;
+    @include text_style($font-size-exsm, $weight-normal, $bright-blue);
+    padding-bottom: 7px;
+    &:hover {
+      border-bottom: 1px solid $bright-blue;
+    }
   }
 }
 
 @media (min-width: 320px) and (max-width: 800px) {
-  .articles {
+  %articles_container_small {
     width: 88%;
     margin: auto;
     box-sizing: border-box;
     text-align: center;
+  }
+  %article_small {
+    width: 100%;
+    clear: both;
+    text-align: start;
+    margin-bottom: 30px;
+  }
+  .articles {
+    @extend %articles_container_small;
     article {
-      width: 100%;
-      clear: both;
-      text-align: start;
-      margin-bottom: 30px;
+      @extend %article_small;
     }
     .left {
       img {
-        float: none;
-        width: 100%;
-        margin: 0;
+        @include article_image_mobile();
       }
     }
     .right {
       img {
-        float: none;
-        width: 100%;
-        margin: 0;
+        @include article_image_mobile();
       }
     }
   }
   .article-desc {
     h2 {
       width: 100%;
-      font-size: $font-size-md;
-      font-weight: $weight-bolder;
-      color: $violet;
+      @include text_style($font-size-md, $weight-bolder, $violet);
       display: block;
       margin-top: 26px;
       margin-bottom: 45px;
     }
     p {
       width: 100%;
-      font-size: $font-size-exsm;
-      font-weight: $weight-normal;
-      color: $violet;
+      @include text_style($font-size-exsm, $weight-normal, $violet);
       display: block;
       margin-bottom: 58px;
     }
     a {
       text-decoration: none;
-      color: $bright-blue;
-      font-size: $font-size-exsm;
-      font-weight: $weight-normal;
+      @include text_style($font-size-exsm, $weight-normal, $bright-blue);
+      padding-bottom: 7px;
+      &:hover {
+        border-bottom: 1px solid $bright-blue;
+      }
     }
   }
 }
+
 @media (min-width: 801px) and (max-width: 1390px) {
-  .articles {
+  %articles_container_medium {
     width: 88%;
     margin: auto;
     box-sizing: border-box;
     text-align: center;
+  }
+  %article_medium {
+    width: 100%;
+    clear: both;
+    text-align: start;
+    margin-bottom: 30px;
+  }
+  .articles {
+    @extend %articles_container_medium;
     article {
-      width: 100%;
-      clear: both;
-      text-align: start;
-      margin-bottom: 30px;
+      @extend %article_medium;
     }
     .left {
       img {
-        float: left;
-        width: 50%;
+        @include article_image_tablet(left);
         margin-right: 20px;
       }
     }
     .right {
       img {
-        float: right;
-        width: 50%;
+        @include article_image_tablet(right);
         margin-left: 20px;
       }
     }
@@ -130,27 +130,21 @@
   .article-desc {
     h2 {
       width: 45%;
-      font-size: $font-size-md;
-      font-weight: $weight-bolder;
-      color: $violet;
+      @include text_style($font-size-md, $weight-bolder, $violet);
       display: inline-block;
       margin-top: 26px;
       margin-bottom: 45px;
     }
     p {
       width: 45%;
-      font-size: $font-size-exsm;
-      font-weight: $weight-normal;
-      color: $violet;
+      @include text_style($font-size-exsm, $weight-normal, $violet);
       display: inline-block;
       margin-bottom: 58px;
     }
     a {
       display: inline-block;
       text-decoration: none;
-      color: $bright-blue;
-      font-size: $font-size-exsm;
-      font-weight: $weight-normal;
+      @include text_style($font-size-exsm, $weight-normal, $bright-blue);
     }
   }
 }

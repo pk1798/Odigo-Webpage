@@ -1,75 +1,95 @@
+@mixin figure {
+  height: 354px;
+  position: relative;
+  display: inline-block;
+}
+
 .trips {
   width: 88%;
   max-width: 1262px;
   margin: auto;
   margin-bottom: 130px;
-  h2 {
-    margin-bottom: 36px;
+  hr {
+    @include title_style(20%);
   }
-  &__row-1 {
-    div {
-      display: inline-block;
-      background-position: center;
-      background-size: cover;
-      filter: brightness(70%);
-      width: 48.5%;
-      margin: 5px;
-      height: 354px;
-      position: relative;
-      h3 {
-        font-size: $font-size-xxl;
-        font-weight: $weight-bold;
-        color: $white;
-        vertical-align: middle;
-        position: absolute;
-        bottom: 27px;
-        left: 29px;
-      }
+  h2 {
+    margin-bottom: 7px;
+  }
+
+  .image-container {
+    img {
+      width: 100%;
+      height: 100%;
+      filter: brightness(50%);
+    }
+    figcaption {
+      @include text_style($font-size-xxl, $weight-bold, $white);
+      vertical-align: middle;
+      position: absolute;
+      bottom: 27px;
+      left: 30px;
     }
   }
-  &__row-2 {
-    div {
-      display: inline-block;
-      background-position: center;
-      background-size: cover;
-      filter: brightness(70%);
-      width: 32%;
-      margin: 5px;
-      height: 283px;
-      position: relative;
-      h3 {
-        font-size: $font-size-xxl;
-        font-weight: $weight-bold;
-        color: $white;
-        vertical-align: middle;
-        position: absolute;
-        bottom: 27px;
-        left: 29px;
-      }
+  .image-container {
+    width: 100%;
+    figure:nth-child(1) {
+      width: calc((100% - 10px) / 2);
+      @include figure();
+    }
+    figure:nth-child(2) {
+      width: calc((100% - 10px) / 2);
+      @include figure();
+    }
+    figure:nth-child(3) {
+      width: calc((100% - 20px) / 3);
+      @include figure();
+      margin-right: 4px;
+    }
+    figure:nth-child(4) {
+      width: calc((100% - 20px) / 3);
+      @include figure();
+
+      margin-right: 4px;
+    }
+    figure:nth-child(5) {
+      width: calc((100% - 20px) / 3);
+      @include figure();
     }
   }
 }
-
 @media (min-width: 320px) and(max-width: 800px) {
+  %figure {
+    height: 354px;
+    position: relative;
+    display: inline-block;
+  }
   .trips {
-    width: 88%;
-    max-width: 1262px;
-    margin: auto;
-    margin-bottom: 130px;
     h2 {
       margin-bottom: 36px;
       margin-top: 30px;
     }
-    &__row-1 {
-      div {
+    .image-container {
+      figure:nth-child(1) {
         width: 100%;
-        box-shadow: 0 2px 20px 0 rgba(21, 24, 36, 0.16);
+        @include figure();
       }
-    }
-    &__row-2 {
-      div {
+      figure:nth-child(2) {
         width: 100%;
-        box-shadow: 0 2px 20px 0 rgba(21, 24, 36, 0.16);
+        @include figure();
+      }
+      figure:nth-child(3) {
+        width: 100%;
+        @include figure();
+        margin-right: 4px;
+      }
+      figure:nth-child(4) {
+        width: 100%;
+        @include figure();
+        margin-right: 4px;
+      }
+      figure:nth-child(5) {
+        width: 100%;
+        @include figure();
       }
     }
   }

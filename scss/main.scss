@@ -2,6 +2,7 @@
 @import "vendors/resets";
 
 // abstracts
+@import "abstracts/mixins";
 @import "abstracts/variables";
 
 // base
@@ -15,7 +16,6 @@
 @import "components/cards";
 
 // layout
-@import "layout/body";
 @import "layout/header";
 @import "layout/benefits";
 @import "layout/trips";

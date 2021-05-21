@@ -1,5 +1,4 @@
 // header
-
 header {
   width: 100%;
   height: 100vh;
@@ -9,7 +8,6 @@ header {
   background-repeat: no-repeat;
   padding-top: 56px;
 }
-
 .header__container {
   width: 76%;
   margin: auto;
@@ -40,6 +38,24 @@ header {
           text-decoration: none;
           color: $white;
         }
+      }
+    }
+    li {
+      position: relative;
+      a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: -10px;
+        background-color: $white;
+        transform: scale(0, 1);
+        transition: transform 0.3s ease;
+        transform-origin: 0% 100%;
+      }
+      a:hover::after {
+        transform: scale(1, 1);
       }
     }
     .nav__logo {
@@ -82,7 +98,7 @@ header {
 @media (min-width: 320px) and (max-width: 1439px) {
   header {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     nav {
       .nav__logo {
         width: 100%;
@@ -94,7 +110,40 @@ header {
       .nav__list {
         display: none;
       }
+      .nav__list.show {
+        font-size: $font-size-xl;
+        font-weight: $weight-bold;
+        display: block;
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        background-color: rgba(21, 24, 36, 0.9);
+        border-radius: 20px;
+        min-width: 90%;
+        height: 80vh;
+        z-index: 10;
+        overflow: scroll;
+        text-align: center;
+        padding: 50px;
+        box-shadow: -1px 1px 20px 3px rgba(0, 0, 0, 0.73);
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      ul {
+        width: 40%;
+        li {
+          display: block;
+          margin-left: calc(40% / 2);
+          margin-right: calc(40% / 2);
+          margin-bottom: 150px;
+          a {
+            @include text_style($font-size-xl, $weight-bold, $white);
+          }
+        }
+      }
     }
+
     .header__container {
       .nav__burger-icon {
         display: inline-block;
@@ -103,17 +152,17 @@ header {
     //   about
     .header__container {
       width: 90%;
+      height: auto;
       .about {
         width: 100%;
         &__title {
           width: 100%;
-          margin-top: 146px;
-          margin-bottom: 22px;
+          margin-top: 70px;
+          margin-bottom: 11px;
         }
         &__desc {
           width: 70%;
           line-height: 1.5;
-          margin-bottom: 39px;
         }
       }
     }

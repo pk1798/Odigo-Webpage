@@ -1,80 +1,76 @@
 .benefits {
-  width: 76%;
-  max-width: 1262px;
+  width: calc(100% - 180px);
   margin: auto;
   padding: 93px 63px 112px 99px;
-  //   margin-bottom: 130px;
   box-shadow: 0 2px 20px 0 rgba(21, 24, 36, 0.16);
   background-color: white;
-  text-align: justify;
   position: relative;
-  top: -200px;
-  &:after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-  }
+  top: -150px;
+
   h2 {
     margin-bottom: 60px;
   }
   article {
     display: inline-block;
-    width: 25%;
-    margin-top: 60px;
+    width: calc(100% / 3);
+    max-width: 317px;
+    margin: auto;
+    margin-right: calc((100% - 951px) / 3);
     img {
       margin-bottom: 37px;
     }
     h3 {
-      font-size: $font-size-sm;
-      font-weight: $weight-bolder;
+      @include text_style($font-size-sm, $weight-bolder, $black);
       margin-bottom: 26px;
     }
     p {
-      font-size: $font-size-exsm;
-      font-weight: $weight-normal;
+      @include text_style($font-size-exsm, $weight-normal, $black);
       margin-bottom: 39px;
     }
     a {
       text-decoration: none;
-      color: $bright-blue;
-      font-size: $font-size-exsm;
-      font-weight: $weight-normal;
+      @include text_style($font-size-exsm, $weight-normal, $bright-blue);
+      padding-bottom: 7px;
+      &:hover {
+        border-bottom: 1px solid $bright-blue;
+      }
     }
+  }
+  article:nth-child(4) {
+    margin-right: 0;
   }
 }
 
-@media (min-width: 320px) and (max-width: 800px) {
+@media (min-width: 320px) and (max-width: 1439px) {
   .benefits {
     position: static;
     width: 100%;
-    max-width: none;
     margin: auto;
     box-sizing: border-box;
     padding: 30px 50px;
     text-align: center;
+    margin-bottom: 130px;
     article {
       display: inline-block;
       width: 100%;
       margin-top: 60px;
+      margin-right: 20px;
+      text-align: center;
       img {
         margin-bottom: 37px;
       }
       h3 {
         width: 100%;
-        font-size: $font-size-exsm;
-        font-weight: $weight-bolder;
+        @include text_style($font-size-exsm, $weight-bolder, $black);
         margin-bottom: 26px;
       }
       p {
-        font-size: $font-size-exsm;
-        font-weight: $weight-normal;
+        @include text_style($font-size-exsm, $weight-normal, $black);
         margin-bottom: 39px;
       }
       a {
         text-decoration: none;
-        color: $bright-blue;
-        font-size: $font-size-exsm;
-        font-weight: $weight-normal;
+        @include text_style($font-size-exsm, $weight-normal, $bright-blue);
       }
     }
   }

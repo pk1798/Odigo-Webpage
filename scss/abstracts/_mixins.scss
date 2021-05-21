@@ -1,0 +1,60 @@
+// button
+
+@mixin button($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $white;
+  background-color: $blue;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+// typography
+
+@mixin text_style($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin title_style($width) {
+  height: 3px;
+  background-color: $bright-blue;
+  border: none;
+  width: $width;
+  margin-bottom: 54px;
+}
+
+// article
+
+@mixin article_image($float) {
+  float: $float;
+  margin-bottom: 77px;
+}
+
+@mixin article_image_mobile {
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+
+@mixin article_image_tablet($float) {
+  float: $float;
+  width: 50%;
+}
+
+// places
+
+@mixin places_layout($width) {
+  width: $width;
+  max-width: 1262px;
+  margin: auto;
+  clear: both;
+}
+
+// footer
+@mixin footer_nav_list($width, $display) {
+  width: $width;
+  display: $display;
+}

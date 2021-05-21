@@ -1,59 +1,47 @@
 .places {
-  width: 88%;
-  max-width: 1262px;
+  @include places_layout(88%);
+  hr {
+    @include title_style(20%);
+  }
+  h2 {
+    margin-bottom: 7px;
+  }
+  .cards {
+    width: calc(100% / 3);
+    max-width: 386px;
+    margin: 0 calc((100% - 1158px) / 6);
+  }
+}
+.cards_container {
+  width: 100%;
+  overflow: auto;
   margin: auto;
-  clear: both;
 }
 
-@media (min-width: 320px) and (max-width: 720px) {
+@media (min-width: 1021px) and (max-width: 1320px) {
   .places {
-    width: 88%;
-    max-width: none;
-    margin: auto;
-    text-align: justify;
+    @include places_layout(88%);
+    h2 {
+      margin-bottom: 7px;
+    }
     .cards {
-      width: 100%;
-      min-width: none;
-      margin: auto;
-      margin-right: 10px;
-      figure {
-        width: 100%;
-        margin-bottom: 45px;
-        img {
-          width: 100%;
-          min-width: 250px;
-        }
-        figcaption {
-          width: 100%;
-          min-width: 250px;
-        }
-      }
+      width: calc(100% / 2);
+      max-width: 386px;
+      margin: 0 calc((100% - 772px) / 4);
     }
   }
 }
 
-@media (min-width: 721px) and (max-width: 1390px) {
+@media (min-width: 320px) and (max-width: 1020px) {
   .places {
-    width: 88%;
-    max-width: none;
-    margin: auto;
-    text-align: justify;
-    .cards {
-      width: 45%;
-      min-width: none;
-      margin: auto;
-      margin-right: 10px;
-      figure {
+    @include places_layout(88%);
+    h2 {
+      margin-bottom: 7px;
+    }
+    .cards_container {
+      .cards {
         width: 100%;
-        margin-bottom: 45px;
-        img {
-          width: 100%;
-          min-width: 250px;
-        }
-        figcaption {
-          width: 100%;
-          min-width: 250px;
-        }
+        margin: auto;
       }
     }
   }

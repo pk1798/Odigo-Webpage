@@ -1,19 +1,18 @@
 .button-bg {
-  font-size: $font-size-md;
-  font-weight: $weight-bold;
-  color: $white;
-  background-color: $blue;
+  @include button($font-size-md, $weight-bold);
   padding: 15px 39px 14px;
-  border: none;
-  outline: none;
 }
 
 .button-sm {
-  font-size: $font-size-exsm;
-  font-weight: $weight-normal;
-  color: $white;
-  background-color: $blue;
+  @include button($font-size-exsm, $weight-normal);
   padding: 12px 19px 11px;
-  border: none;
-  outline: none;
+}
+
+button {
+  cursor: pointer;
+  &:hover {
+    box-shadow: -1px 3px 13px 0px rgba(0, 0, 0, 0.38);
+    position: relative;
+    top: -1px;
+  }
 }

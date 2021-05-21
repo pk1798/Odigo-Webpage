@@ -17,13 +17,9 @@
     border: none;
     outline: none;
     background: none;
-    font-size: $font-size-sm;
-    font-weight: $weight-bold;
-    color: $white;
+    @include text_style($font-size-sm, $weight-bold, $white);
     &::placeholder {
-      font-size: $font-size-sm;
-      font-weight: $weight-bold;
-      color: $white;
+      @include text_style($font-size-sm, $weight-bold, $white);
     }
   }
 }
